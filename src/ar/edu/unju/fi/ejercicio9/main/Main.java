@@ -25,7 +25,7 @@ public class Main {
 		}
 		for(int i=0; i < 3; i++) {
 			System.out.println(productos[i]);
-			System.out.println("Aplicando el descuento, el precio final del producto es: " + productos[i].calcularDescuento());
+			System.out.println("Aplicando el descuento, el precio final del producto es: " + productos[i].calcularDescuento() + "$");
 		}
 	}
 
