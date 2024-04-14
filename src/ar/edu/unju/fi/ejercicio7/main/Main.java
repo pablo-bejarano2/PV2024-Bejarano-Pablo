@@ -23,6 +23,7 @@ public class Main {
 		empleado.aumentarSalario();
 		System.out.println("Con el nuevo salario: ");
 		System.out.println(empleado);
+		scanner.close();
 	}
 
 }
