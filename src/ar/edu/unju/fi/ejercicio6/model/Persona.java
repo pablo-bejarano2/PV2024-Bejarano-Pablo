@@ -11,7 +11,35 @@ public class Persona {
 	public Persona() {
 		
 	};
+	
+	
+	public Persona(Integer dni, String nombre, LocalDate fnacimiento, String provincia) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		this.fnacimiento = fnacimiento;
+		this.provincia = provincia;
+	}
+	
+	public Persona(Integer dni, String nombre, LocalDate fnacimiento) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		this.fnacimiento = fnacimiento;
+		this.provincia = "Jujuy";
+	}
 
+	public Integer calcularEdad() {
+		LocalDate fechaHoy = LocalDate.now();
+		
+		return fechaHoy.compareTo(fnacimiento);
+		
+	}
+	
+	public Boolean verificarMayorEdad() {
+		return (calcularEdad() >= 18);
+	}
+	
 	public Integer getDni() {
 		return dni;
 	}
@@ -46,8 +74,22 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [dni=" + dni + ", nombre=" + nombre + ", fnacimiento=" + fnacimiento + ", provincia="
-				+ provincia + "]";
+		if(verificarMayorEdad()) {
+		return "Dni: " + dni + "\n" +
+				"Nombre: " + nombre + "\n" +
+				"Fecha de nacimiento: " + fnacimiento + "\n" +
+				"Edad: " + calcularEdad() + "\n" +
+				"Provincia: " + provincia + "\n"+
+				"Es mayor de edad";
+				}else {
+		return "Dni: " + dni + "\n" +
+				"Nombre: " + nombre + "\n" +
+				"Fecha de nacimiento: " + fnacimiento + "\n" +
+				"Edad: " + calcularEdad() + "\n" +
+				"Provincia: " + provincia + "\n"+
+				"No es mayor de edad";
+				}
+					
 	}
 	
 	//public Integer getEdad() {
