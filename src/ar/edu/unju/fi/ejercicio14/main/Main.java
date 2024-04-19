@@ -8,10 +8,9 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		int n;
 		do {
-			System.out.println("Ingrese un numero entre 3 y el 10: ");
+			System.out.println("Ingrese el rango de la lista de numeros (entre 3 y el 10): ");
 			n = scanner.nextInt(); 
 		}while(n > 10 || n < 3);
-		System.out.println(n);
 		
 		int [] nums = new int[n];
 		int suma = 0;
