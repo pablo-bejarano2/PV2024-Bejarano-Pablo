@@ -12,6 +12,7 @@ public class Main {
 		calculadora.setN(scanner.nextInt());
 		System.out.println("La sumatoria del numero " + calculadora.getN() + " es: "+ calculadora.calcularSumatoria());
 		System.out.println("La sumatoria del numero " + calculadora.getN() + " es: "+ calculadora.calcularProductoria());
+		scanner.close();
 	}
 
 }

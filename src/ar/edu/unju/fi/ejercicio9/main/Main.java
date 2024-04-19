@@ -27,6 +27,7 @@ public class Main {
 			System.out.println(productos[i]);
 			System.out.println("Aplicando el descuento, el precio final del producto es: " + productos[i].calcularDescuento() + "$");
 		}
+		scanner.close();
 	}
 
 }
